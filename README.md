@@ -65,7 +65,7 @@ vgrename centos OtusHW7
 ```
 ![#1-2](https://user-images.githubusercontent.com/114483769/216231613-46ae9e65-26a7-45e5-bd62-f345ad4f61fc.jpeg)
 
-Редактируем файлы: /etc/fstab, /etc/default/grub, /boot/grub2/grub.cfg. Меняе везде название старой VG `centos` на новое `OtusHW7`.
+Редактируем файлы: `/etc/fstab, /etc/default/grub, /boot/grub2/grub.cfg.` Меняе везде название старой VG `centos` на новое `OtusHW7`.
 
 Пересобираем `initrd image` с новыми параметрами командой 
 ```
@@ -80,7 +80,7 @@ mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
 
 В каталог, где хранятся скрипты модулей `/usr/lib/dracut/modules.d/` добавляем тестовый каталог `01test` и в него помещаем два срипта:
 
-`module-setup.sh` - устанавливает модулþ и вýзýвает скрипт `test.sh`
+`module-setup.sh` - устанавливает модуль и вызывает скрипт `test.sh`
 
 ```
 #!/bin/bash
