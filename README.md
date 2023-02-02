@@ -65,7 +65,7 @@ vgrename centos OtusHW7
 ```
 ![#1-2](https://user-images.githubusercontent.com/114483769/216231613-46ae9e65-26a7-45e5-bd62-f345ad4f61fc.jpeg)
 
-Редактируем файлы: `/etc/fstab, /etc/default/grub, /boot/grub2/grub.cfg.` Меняе везде название старой VG `centos` на новое `OtusHW7`.
+Редактируем файлы: `/etc/fstab`, `/etc/default/grub`, `/boot/grub2/grub.cfg.` Меняе везде название старой VG `centos` на новое `OtusHW7`.
 
 Пересобираем `initrd image` с новыми параметрами командой 
 ```
