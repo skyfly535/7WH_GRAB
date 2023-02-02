@@ -6,7 +6,7 @@
 
 В конце строки, начинающуюся с `linux16` дописываем `init=/bin/sh` и жмем `сtrl-x`.
 
-рис 1-1-1
+![#1-1-1](https://user-images.githubusercontent.com/114483769/216231455-bafb8dd8-8709-40f1-8584-08547bfd6486.jpeg)
 
 Перемонтируем файловую систему с правами записи: 
 ```
@@ -21,7 +21,7 @@ mount | grep root
 
 или создав файл.
 
-рис 1-1-2
+![#1-1-2](https://user-images.githubusercontent.com/114483769/216231498-2252f912-a47c-4ef9-8f32-69b732a91e5d.jpeg)
 
 ### Второй способ `rd.break`
 
@@ -45,8 +45,7 @@ chroot /sysroot
 ```
 touch /.autorelabel
 ```
-
-рис 1-1
+![#1-1](https://user-images.githubusercontent.com/114483769/216231575-6e5a0f46-486a-455e-84ff-a0ff6fdd8f70.jpeg)
 
 Перегружаем машину и входим с новым паролем.
 
@@ -64,8 +63,7 @@ touch /.autorelabel
 ```
 vgrename centos OtusHW7
 ```
-
-рис 1-2
+![#1-2](https://user-images.githubusercontent.com/114483769/216231613-46ae9e65-26a7-45e5-bd62-f345ad4f61fc.jpeg)
 
 Редактируем файлы: /etc/fstab, /etc/default/grub, /boot/grub2/grub.cfg. Меняе везде название старой VG `centos` на новое `OtusHW7`.
 
@@ -76,7 +74,7 @@ mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
 
 Перезагружаемся и проверяем результат.
 
-рис 1-3
+![#1-3](https://user-images.githubusercontent.com/114483769/216231642-a00bd968-9bb8-4de0-ad57-cf65246f71c5.jpeg)
 
 ## Добавить модуль в initrd
 
@@ -137,5 +135,5 @@ mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
 
 Смотрим вывод
 
-рис 2-1
+![#2-1](https://user-images.githubusercontent.com/114483769/216231726-2a8a4811-1a37-4061-87a9-e087bc6e3530.jpeg)
 
